@@ -194,13 +194,31 @@ const CASE_STUDIES = {
     impact: 'Centralizing building health indicators and automating scheduling patterns reduced coordination blockages and helped technicians respond to critical hospital system failures faster.'
   },
   'smart-banking': {
-    isInteractive: true,
     category: 'Adaptive UX Design Case Study',
     title: 'Smart Banking App (Adaptive UX)',
+    client: 'Fintech Exploratory Project',
     duration: 'Fintech Case Study',
     role: 'UI/UX Lead Designer',
     industry: 'Fintech / Banking',
-    overview: 'Adaptive UX represents a paradigm shift where interfaces dynamically mutate prioritization and information density based on user telemetry. Rather than static layouts, this study maps user telemetry (like repeat balance inquiries or receipt checking) to trigger specialized, distraction-free views.'
+    overview: 'Adaptive UX represents a paradigm shift where interfaces dynamically mutate prioritization and information density based on user telemetry. Rather than static layouts, this study maps user telemetry (like repeat balance inquiries or receipt checking) to trigger specialized, distraction-free views.',
+    problem: 'Standard banking apps show the same layout to everyone, despite differing immediate needs—like anxiety over a delayed salary or a pending large transfer.',
+    research: [
+      'Identified key stress scenarios in mobile banking (e.g., waiting for salary, transaction anxiety).',
+      'Mapped out user telemetry triggers that indicate specific financial intents.',
+      'Explored how UI can adapt its hierarchy to address immediate user concerns directly.'
+    ],
+    solutions: [
+      'Scenario A: Salary Wait State - Prioritizes expected salary countdown and hides promotional banners.',
+      'Scenario B: Transaction Anxiety - Surfaces transaction status tracker and support shortcuts at the top.'
+    ],
+    impact: 'Demonstrated how adaptive interfaces can proactively address user anxiety and reduce unnecessary navigation friction.'
+  },
+  'hope': {
+    category: 'Wellbeing App Concept',
+    title: 'Hope: A Wellbeing Concept',
+    duration: '3 Months',
+    role: 'Product Designer',
+    industry: 'Mental Health & Self-Care'
   }
 };
 
@@ -267,12 +285,232 @@ function initCaseStudyModal() {
 
       // Set up the dynamic toggles
       initBankingDemoInteractivity();
+    } else if (projectId === 'hope') {
+      container.style.maxWidth = '900px';
+      contentArea.innerHTML = `
+        <div class="modal-header">
+          <span class="category">${data.category}</span>
+          <h2>${data.title}</h2>
+          <div class="modal-meta-row">
+            <span>Role: <strong>${data.role}</strong></span>
+            <span>Duration: <strong>${data.duration}</strong></span>
+            <span>Industry: <strong>${data.industry}</strong></span>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>The Core Idea</h4>
+          <p><strong>A quiet companion for everyday wellbeing.</strong></p>
+          <p>What if emotional growth didn't have to be measured in streaks? Hope is a wellbeing concept that visualizes emotional growth as a living garden. Instead of rewarding consistency with numbers, it celebrates small moments of care—while helping trusted people become better supporters without compromising privacy.</p>
+        </div>
+
+        <div class="hope-pillars-grid">
+          <div class="hope-pillar-card">
+            <h5>🌱 Grow</h5>
+            <p>Your garden grows with small acts of care.</p>
+          </div>
+          <div class="hope-pillar-card">
+            <h5>🤝 Support</h5>
+            <p>Invite trusted people into your journey.</p>
+          </div>
+          <div class="hope-pillar-card">
+            <h5>🔒 Privacy</h5>
+            <p>Share only the garden, not the journals.</p>
+          </div>
+          <div class="hope-pillar-card">
+            <h5>✨ Celebrate</h5>
+            <p>Small steps are honored and recognized.</p>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>The Problem & Competitor Landscape</h4>
+          <p>Most wellbeing apps ask people to complete habits, maintain streaks, or log emotions. While these approaches can help, they often make wellbeing feel like another task to manage. We wanted to explore a calmer question: What if growth simply happened in the background?</p>
+          
+          <table class="competitor-table">
+            <thead>
+              <tr>
+                <th>App</th>
+                <th>Core Focus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Calm</strong></td>
+                <td>Meditation & sleep</td>
+              </tr>
+              <tr>
+                <td><strong>Headspace</strong></td>
+                <td>Mindfulness routines</td>
+              </tr>
+              <tr>
+                <td><strong>Finch</strong></td>
+                <td>Gamified self-care</td>
+              </tr>
+              <tr>
+                <td><strong>Daylio</strong></td>
+                <td>Mood tracking</td>
+              </tr>
+              <tr>
+                <td><strong>How We Feel</strong></td>
+                <td>Emotional awareness</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p style="font-style: italic; color: #10B981; margin-top: 10px; margin-bottom: 20px;">
+            "What I noticed: Most products help you. Very few help the people who genuinely want to support you. That became Hope's opportunity."
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Visualizing the Screens</h4>
+          <p>Here is how the concepts translate into design screens, celebrating calm visual language and thoughtful support structures:</p>
+          
+          <div class="hope-screens-showcase">
+            
+            <div class="hope-screen-block">
+              <div class="hope-screen-info">
+                <h5>1. Welcome & Companion Screen</h5>
+                <p>Establishing the mood with soft colors, gentle messaging, and selecting a companion to guide the user's emotional garden journey.</p>
+              </div>
+              <div class="hope-screen-images">
+                <div class="hope-screen-img-container">
+                  <img src="./Projects/Hope/Welcome screen.png" alt="Welcome Screen" />
+                </div>
+                <div class="hope-screen-img-container">
+                  <img src="./Projects/Hope/Choose your companion..png" alt="Choose Your Companion Screen" />
+                </div>
+              </div>
+            </div>
+
+            <div class="hope-screen-block">
+              <div class="hope-screen-info">
+                <h5>2. Home Dashboard</h5>
+                <p>The primary interactive interface visualising progress as a living garden instead of numbers or streak labels.</p>
+              </div>
+              <div class="hope-screen-images">
+                <div class="hope-screen-img-container" style="max-width: 320px; margin: 0 auto;">
+                  <img src="./Projects/Hope/HomeScreen.png" alt="Home Dashboard" />
+                </div>
+              </div>
+            </div>
+
+            <div class="hope-screen-block">
+              <div class="hope-screen-info">
+                <h5>3. My Journey</h5>
+                <p>Reflecting on emotional growth over time with calm indicators and milestone highlights.</p>
+              </div>
+              <div class="hope-screen-images">
+                <div class="hope-screen-img-container" style="max-width: 320px; margin: 0 auto;">
+                  <img src="./Projects/Hope/My journey.png" alt="My Journey Screen" />
+                </div>
+              </div>
+            </div>
+
+            <div class="hope-screen-block">
+              <div class="hope-screen-info">
+                <h5>4. Support Circle</h5>
+                <p>Allowing verified supporters to see garden health and extend digital care shortcuts without reading private journal entries.</p>
+              </div>
+              <div class="hope-screen-images">
+                <div class="hope-screen-img-container">
+                  <img src="./Projects/Hope/Support circle.png" alt="Support Circle Setup" />
+                </div>
+                <div class="hope-screen-img-container">
+                  <img src="./Projects/Hope/SupportViewScreen.png" alt="Support Circle Viewer Screen" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      `;
     } else {
       // Standard static project modal rendering
       container.style.maxWidth = '800px';
 
       const researchHtml = data.research.map(item => `<li>${item}</li>`).join('');
       const solutionsHtml = data.solutions.map(item => `<li>${item}</li>`).join('');
+
+      let galleryHtml = '';
+      if (projectId === 'legal-saas') {
+        galleryHtml = `
+          <div class="modal-section">
+            <h4>Design Artifacts</h4>
+            <div class="case-study-gallery">
+              <div class="gallery-item">
+                <span class="gallery-caption">Interactive Dashboard View</span>
+                <img src="./Projects/Legal/Dashboard.png" alt="Legal SaaS Dashboard" class="gallery-image" />
+              </div>
+              <div class="gallery-item">
+                <span class="gallery-caption">Plot Details & Conveyancing Workflow</span>
+                <img src="./Projects/Legal/Plot details.png" alt="Legal SaaS Plot details" class="gallery-image" />
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (projectId === 'facility-ops') {
+        galleryHtml = `
+          <div class="modal-section">
+            <h4>Design Artifacts</h4>
+            <div class="case-study-gallery">
+              <div class="gallery-item">
+                <span class="gallery-caption">Facilities Overview</span>
+                <img src="./Projects/Facility/Facilities.png" alt="Facility Operations Facilities" class="gallery-image" />
+              </div>
+              <div class="gallery-item">
+                <span class="gallery-caption">Building Information View</span>
+                <img src="./Projects/Facility/Building information.png" alt="Building Information View" class="gallery-image" />
+              </div>
+              <div class="gallery-item">
+                <span class="gallery-caption">Issue Details & Dispatch Status</span>
+                <img src="./Projects/Facility/Issue details.png" alt="Issue Details View" class="gallery-image" />
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (projectId === 'smart-banking') {
+        galleryHtml = `
+          <div class="modal-section">
+            <h4>Adaptive Scenarios & Screen Layouts</h4>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+              <div class="gallery-item">
+                <span class="gallery-caption">Salary Wait Scenario</span>
+                <img src="./Projects/Bank/Salary%20wait.png" alt="Salary Wait State" class="gallery-image" />
+              </div>
+              <div class="gallery-item">
+                <span class="gallery-caption">Salary Wait Context</span>
+                <img src="./Projects/Bank/Salary%20wait%20info.png" alt="Salary Wait Info" class="gallery-image" />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+              <div class="gallery-item">
+                <span class="gallery-caption">Transaction Anxiety Scenario</span>
+                <img src="./Projects/Bank/Transaction%20anxity.png" alt="Transaction Anxiety" class="gallery-image" />
+              </div>
+              <div class="gallery-item">
+                <span class="gallery-caption">Transaction Anxiety Context</span>
+                <img src="./Projects/Bank/transaction-anxiety-.png" alt="Transaction Anxiety Info" class="gallery-image" />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 10px;">
+              <div class="gallery-item">
+                <span class="gallery-caption">System Error Handling</span>
+                <img src="./Projects/Bank/When%20the%20system%20gets%20wrong.png" alt="System Error" class="gallery-image" />
+              </div>
+              <div class="gallery-item">
+                <span class="gallery-caption">System Error Context</span>
+                <img src="./Projects/Bank/When%20the%20system%20gets%20wrong%20-%20Emplaination.png" alt="System Error Info" class="gallery-image" />
+              </div>
+            </div>
+
+          </div>
+        `;
+      }
 
       contentArea.innerHTML = `
         <div class="modal-header">
@@ -315,6 +553,8 @@ function initCaseStudyModal() {
             <p>${data.impact}</p>
           </div>
         </div>
+
+        ${galleryHtml}
       `;
     }
 
