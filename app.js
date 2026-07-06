@@ -4,7 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
-  initCustomCursor();
   initMobileMenu();
   initScrollSpy();
   initCaseStudyModal();
@@ -29,69 +28,6 @@ function initHeaderScroll() {
   handleScroll(); // Initial check
 }
 
-/* ==========================================
-   CUSTOM INTERACTIVE CURSOR
-   ========================================== */
-function initCustomCursor() {
-  const dot = document.getElementById('customCursorDot');
-  const ring = document.getElementById('customCursorRing');
-  
-  if (!dot || !ring) return;
-
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    // Position dot instantly
-    dot.style.left = `${mouseX}px`;
-    dot.style.top = `${mouseY}px`;
-  });
-
-  // Smooth trailing effect for the cursor ring
-  const updateRingPosition = () => {
-    const delay = 6; // Lower = faster response
-    
-    ringX += (mouseX - ringX) / delay;
-    ringY += (mouseY - ringY) / delay;
-    
-    ring.style.left = `${ringX}px`;
-    ring.style.top = `${ringY}px`;
-    
-    requestAnimationFrame(updateRingPosition);
-  };
-  
-  updateRingPosition();
-
-  // Add hover state triggers
-  const interactiveSelector = 'a, button, [role="button"], .project-card, .banking-toggle-btn, input, textarea, select';
-  const addHoverEffect = () => {
-    dot.classList.add('custom-cursor-hover');
-    ring.classList.add('custom-cursor-ring-hover');
-  };
-  const removeHoverEffect = () => {
-    dot.classList.remove('custom-cursor-hover');
-    ring.classList.remove('custom-cursor-ring-hover');
-  };
-
-  const attachListeners = () => {
-    document.querySelectorAll(interactiveSelector).forEach(el => {
-      // Avoid duplicate binding
-      el.removeEventListener('mouseenter', addHoverEffect);
-      el.removeEventListener('mouseleave', removeHoverEffect);
-      el.addEventListener('mouseenter', addHoverEffect);
-      el.addEventListener('mouseleave', removeHoverEffect);
-    });
-  };
-
-  attachListeners();
-  
-  // Re-attach listeners on DOM mutations (useful when screen content changes dynamically)
-  const observer = new MutationObserver(attachListeners);
-  observer.observe(document.body, { childList: true, subtree: true });
-}
 
 /* ==========================================
    MOBILE NAVIGATION MENU
@@ -478,18 +414,18 @@ function initCaseStudyModal() {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
               <div class="gallery-item">
                 <span class="gallery-caption">Salary Wait Scenario</span>
-                <img src="./Projects/Bank/Salary%20wait.png" alt="Salary Wait State" class="gallery-image" />
+                <img src="./Projects/Bank/salary-wait.png" alt="Salary Wait State" class="gallery-image" />
               </div>
               <div class="gallery-item">
                 <span class="gallery-caption">Salary Wait Context</span>
-                <img src="./Projects/Bank/Salary%20wait%20info.png" alt="Salary Wait Info" class="gallery-image" />
+                <img src="./Projects/Bank/salary-wait%20info.png" alt="Salary Wait Info" class="gallery-image" />
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
               <div class="gallery-item">
                 <span class="gallery-caption">Transaction Anxiety Scenario</span>
-                <img src="./Projects/Bank/Transaction%20anxity.png" alt="Transaction Anxiety" class="gallery-image" />
+                <img src="./Projects/Bank/transaction-anxity.png" alt="Transaction Anxiety" class="gallery-image" />
               </div>
               <div class="gallery-item">
                 <span class="gallery-caption">Transaction Anxiety Context</span>
@@ -500,11 +436,11 @@ function initCaseStudyModal() {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 10px;">
               <div class="gallery-item">
                 <span class="gallery-caption">System Error Handling</span>
-                <img src="./Projects/Bank/When%20the%20system%20gets%20wrong.png" alt="System Error" class="gallery-image" />
+                <img src="./Projects/Bank/when-the-system-gets-wrong.png" alt="System Error" class="gallery-image" />
               </div>
               <div class="gallery-item">
                 <span class="gallery-caption">System Error Context</span>
-                <img src="./Projects/Bank/When%20the%20system%20gets%20wrong%20-%20Emplaination.png" alt="System Error Info" class="gallery-image" />
+                <img src="./Projects/Bank/when-the-system-gets-wrong-emplaination.png" alt="System Error Info" class="gallery-image" />
               </div>
             </div>
 
