@@ -42,10 +42,11 @@
       </a>
       
       <nav class="nav-menu" id="navMenu">
-        <a href="#about" class="nav-link active">About</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link nav-btn">Contact</a>
+        <a href="#projects" class="nav-link">Work</a>
+        <a href="#about-me" class="nav-link">About</a>
+        <a href="#" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://www.linkedin.com/in/apurva-tadas-7441151ab/" class="nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </nav>
 
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
@@ -67,14 +68,18 @@
             <span class="pulse-indicator"></span>
             Available for High-Impact Product Roles
           </div>
-          <h1 class="hero-title">
-            Turning workflow chaos into <span class="highlight-text">structured, intuitive products</span>.
-          </h1>
-          <p class="hero-subtitle">
-            I'm a UI/UX Product Designer with 3 years of experience turning complex workflows into structured, intuitive systems.<br><br>My edge? I started in customer operations — watching real users struggle with broken products firsthand. That empathy drives every design decision I make today. At BANAO Tech and now at Xperate, I've applied that to healthcare, fintech, and legal SaaS — where UX clarity isn't optional, it's critical.
+          <h1 class="hero-title" style="margin-bottom: 12px;">Apurva Tadas</h1>
+          <h2 class="highlight-text" style="font-size: 28px; line-height: 1.4; font-weight: 700; margin-bottom: 24px; font-family: var(--font-title);">
+            UI/UX Designer designing clarity into complex products.
+          </h2>
+          <p class="hero-subtitle" style="margin-bottom: 16px;">
+            I design intuitive, scalable experiences for complex SaaS and enterprise products—turning complicated workflows, data, and business requirements into experiences that are easier to understand and use.
+          </p>
+          <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 40px; font-weight: 500;">
+            3+ years in UI/UX · 5 years across technology & customer-facing roles · Pune, India
           </p>
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary" id="btnViewProjects">View Case Studies</a>
+            <a href="#projects" class="btn btn-primary" id="btnViewProjects">View My Work</a>
             <a href="#contact" class="btn btn-secondary" id="btnContactMe">Get in Touch</a>
           </div>
         </div>
@@ -109,10 +114,18 @@
       </div>
     </section>
 
+    <!-- Positioning Statement -->
+    <section class="section-padding" style="padding-top: 60px; padding-bottom: 60px; text-align: center; background: rgba(0, 0, 0, 0.25); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+      <div class="container">
+        <h3 style="font-family: var(--font-title); font-size: 26px; font-weight: 700; margin-bottom: 16px;">I enjoy solving problems that aren't simple.</h3>
+        <p style="font-size: 17px; color: var(--text-secondary); max-width: 800px; margin: 0 auto; line-height: 1.6;">My work focuses on complex products, workflow-heavy systems, and experiences where information needs to be clear, structured, and actionable.</p>
+      </div>
+    </section>
 
 
-    <!-- Experience Section -->
-    <section id="experience" class="section-padding">
+
+    <!-- Experience Section (Hidden as per final order) -->
+    <section id="experience" class="section-padding" style="display: none;">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Career Journey</span>
@@ -188,8 +201,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Featured Work</span>
-          <h2>UX Case Studies</h2>
-          <p>A deep dive into SaaS dashboards, medical operations infrastructure, and dynamic fintech flows.</p>
+          <h2>Selected Work</h2>
+          <p>A selection of projects where I worked across UX, UI, workflows, information architecture, and product thinking.</p>
         </div>
 
         <div class="projects-grid">
@@ -198,17 +211,15 @@
           <div class="project-card" data-project="legal-saas" id="cardLegalSaas">
             <div class="project-img-wrapper">
               <img src="./Projects/Legal/Dashboard.png" alt="Legal Case Management Dashboard" class="project-cover-img" />
-              <span class="project-category">SaaS Product</span>
+              <span class="project-category" style="width: auto; max-width: 90%;">Enterprise SaaS · Legal Tech · Workflow Design</span>
             </div>
             <div class="project-content">
               <h3>Legal Case Management Platform</h3>
-              <p class="project-desc">Replaced fragmented email workflows with a structured, role-based system.</p>
+              <p class="project-desc">Redesigning complex legal workflows across cases, documents, tasks, billing, and role-based dashboards—helping legal professionals navigate day-to-day work with greater clarity.</p>
               <div class="project-tags">
-                <span>Heuristic Evaluations</span>
-                <span>Figma</span>
-                <span>Role-Based Dashboards</span>
+                <span style="background:none; border:none; padding:0; box-shadow:none; font-size:13px; color:var(--text-muted); pointer-events:none;"><strong>My role:</strong> UX Research · Information Architecture · User Flows · Interaction Design · UI · Design System</span>
               </div>
-              <button class="project-link" aria-label="Read Case Study: Legal Case Management Platform">View case study →</button>
+              <button class="project-link" aria-label="Read Case Study: Legal Case Management Platform">View Case Study →</button>
             </div>
           </div>
 
@@ -216,17 +227,15 @@
           <div class="project-card" data-project="facility-ops" id="cardFacilityOps">
             <div class="project-img-wrapper">
               <img src="./Projects/Facility/Issue details.png" alt="Smart Facility Operations System" class="project-cover-img" />
-              <span class="project-category">Hospital Infrastructure</span>
+              <span class="project-category" style="width: auto; max-width: 90%;">Enterprise Platform · Healthcare · Data & Operations</span>
             </div>
             <div class="project-content">
               <h3>Smart Facility Operations System</h3>
-              <p class="project-desc">Transformed reactive hospital maintenance into proactive operational intelligence.</p>
+              <p class="project-desc">Designing an operational platform that brings building information, maintenance workflows, inspections, and facility insights into one connected experience.</p>
               <div class="project-tags">
-                <span>Operational Insights</span>
-                <span>Technician Dispatch</span>
-                <span>Figma</span>
+                <span style="background:none; border:none; padding:0; box-shadow:none; font-size:13px; color:var(--text-muted); pointer-events:none;"><strong>My role:</strong> Product Thinking · Information Architecture · Dashboard Design · Workflow Design · Interaction Design</span>
               </div>
-              <button class="project-link" aria-label="Read Case Study: Smart Facility Operations System">View case study →</button>
+              <button class="project-link" aria-label="Read Case Study: Smart Facility Operations System">View Case Study →</button>
             </div>
           </div>
 
@@ -234,22 +243,20 @@
           <div class="project-card" data-project="smart-banking" id="cardSmartBanking">
             <div class="project-img-wrapper">
               <img src="./Projects/Bank/salary-wait.png" alt="Smart Banking App Adaptive UX" class="project-cover-img" />
-              <span class="project-category">Adaptive UX</span>
+              <span class="project-category" style="width: auto; max-width: 90%;">AI Product · Conversational UX · Financial Services</span>
             </div>
             <div class="project-content">
               <h3>Smart Banking App</h3>
-              <p class="project-desc">Designed adaptive interfaces that respond to real-time user stress signals.</p>
+              <p class="project-desc">Exploring how AI can support everyday banking decisions through contextual assistance, proactive insights, and simpler interactions.</p>
               <div class="project-tags">
-                <span>Adaptive UX</span>
-                <span>Behavior Telemetry</span>
-                <span>Fintech</span>
+                <span style="background:none; border:none; padding:0; box-shadow:none; font-size:13px; color:var(--text-muted); pointer-events:none;"><strong>My role:</strong> Product Concept · UX Strategy · Interaction Design · AI Experience Design</span>
               </div>
-              <button class="project-link" aria-label="Read Case Study: Smart Banking App">View case study →</button>
+              <button class="project-link" aria-label="Read Case Study: Smart Banking App">View Case Study →</button>
             </div>
           </div>
 
           <!-- Project 4: Hope Wellbeing -->
-          <div class="project-card" data-project="hope" id="cardHope">
+          <div class="project-card" data-project="hope" id="cardHope" style="display: none;">
             <div class="project-img-wrapper">
               <img src="./Projects/Hope/HomeScreen.png" alt="Hope Wellbeing Concept" class="project-cover-img" />
               <span class="project-category">Wellbeing Concept</span>
@@ -271,8 +278,80 @@
       </div>
     </section>
 
-    <!-- Key Skills & Credentials Section -->
+    <!-- What I Work On Section -->
     <section class="section-padding">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 40px;">
+          <h2>What I Work On</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          <div class="glass-panel" style="padding: 24px; border: 1px solid var(--border-glass);">
+            <h4 style="margin-bottom: 8px; font-size: 16px;">Complex Workflows</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Multi-step processes, dependencies, approvals, and task-based experiences.</p>
+          </div>
+          <div class="glass-panel" style="padding: 24px; border: 1px solid var(--border-glass);">
+            <h4 style="margin-bottom: 8px; font-size: 16px;">Enterprise & SaaS Products</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Role-based platforms, operational tools, dashboards, and workflow-heavy systems.</p>
+          </div>
+          <div class="glass-panel" style="padding: 24px; border: 1px solid var(--border-glass);">
+            <h4 style="margin-bottom: 8px; font-size: 16px;">Information Architecture</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Structuring complex information so users can find what they need and understand what to do next.</p>
+          </div>
+          <div class="glass-panel" style="padding: 24px; border: 1px solid var(--border-glass);">
+            <h4 style="margin-bottom: 8px; font-size: 16px;">Design Systems</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Creating reusable patterns and consistent experiences across products and workflows.</p>
+          </div>
+          <div class="glass-panel" style="padding: 24px; border: 1px solid var(--border-glass);">
+            <h4 style="margin-bottom: 8px; font-size: 16px;">AI-Enabled Experiences</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Exploring practical ways AI can reduce cognitive load, surface useful insights, and support decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Approach Design Section -->
+    <section class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 40px;">
+          <h2>How I Approach Design</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px;">
+          <div>
+            <h4 style="margin-bottom: 8px; font-size: 16px; color: var(--text-primary);">Understand</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Understand users, business requirements, workflows, and constraints before designing.</p>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 8px; font-size: 16px; color: var(--text-primary);">Simplify</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Break down complex processes and identify friction, repetition, and information gaps.</p>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 8px; font-size: 16px; color: var(--text-primary);">Design</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Create clear information structures, workflows, interaction patterns, and interfaces.</p>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 8px; font-size: 16px; color: var(--text-primary);">Refine</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Collaborate with stakeholders and developers, validate assumptions, and iterate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="section-padding">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 24px;">
+          <h2>A Little About Me</h2>
+        </div>
+        <div style="max-width: 800px; color: var(--text-secondary); font-size: 16px; line-height: 1.7;">
+          <p style="margin-bottom: 16px;">I'm a UI/UX Designer who enjoys working on products where the problem isn't immediately obvious.</p>
+          <p style="margin-bottom: 16px;">My background in customer-facing and technology roles taught me to listen closely to users, understand the root of a problem, and work across different perspectives. Today, I apply that experience to designing complex digital products and workflows.</p>
+          <p style="margin-bottom: 16px;">I'm particularly interested in product design, enterprise SaaS, design systems, and the evolving role of AI in UX.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Skills & Credentials Section (Hidden as per final order) -->
+    <section class="section-padding" style="display: none;">
       <div class="container">
         
         <div class="skills-credentials-grid">
@@ -363,38 +442,23 @@
     </section>
 
     <!-- Contact & Footer Section -->
-    <section id="contact" class="section-padding footer-section">
+    <section id="contact" class="section-padding section-alt footer-section" style="padding-bottom: 40px;">
       <div class="container">
         
-        <div class="footer-layout">
-          
-          <!-- Left column: Info -->
-          <div class="footer-info">
-            <span class="section-tag">Let's Connect</span>
-            <h2>Start a conversation.</h2>
-            <p class="footer-description">Have a complex B2B workflow or SaaS product that needs clarity? Let's discuss how we can partner to optimize your design and research pipelines.</p>
-            
-            <div class="contact-details">
-              <div class="contact-row">
-                <span class="detail-label">EMAIL</span>
-                <a href="mailto:apurva.naik13493@gmail.com" class="detail-value">apurva.naik13493@gmail.com</a>
-              </div>
-              <div class="contact-row">
-                <span class="detail-label">LOCATION</span>
-                <span class="detail-value">Pune, India</span>
-              </div>
-            </div>
+        <div class="footer-layout" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px; margin-bottom: 60px;">
+          <div>
+            <h2 style="margin-bottom: 8px;">Apurva Tadas</h2>
+            <p style="color: var(--text-secondary);">UI/UX Designer designing clarity into complex products.</p>
           </div>
-
-
-
+          <div style="display: flex; gap: 24px; font-weight: 500;">
+            <a href="https://www.linkedin.com/in/apurva-tadas-7441151ab/" target="_blank" rel="noopener noreferrer" style="color: var(--text-primary); text-decoration: none;">LinkedIn</a>
+            <span style="color: var(--text-muted);">·</span>
+            <a href="mailto:apurva.naik13493@gmail.com" style="color: var(--text-primary); text-decoration: none;">Email</a>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-          <p class="copyright">&copy; 2026 Apurva Tadas. All rights reserved.</p>
-          <div class="footer-links">
-            <a href="#">Back to Top &uarr;</a>
-          </div>
+        <div class="footer-bottom" style="border-top: 1px solid var(--border-glass); padding-top: 24px; text-align: center; justify-content: center; display: flex;">
+          <p class="copyright" style="margin: 0;">&copy; 2026 Apurva Tadas. All rights reserved.</p>
         </div>
 
       </div>
